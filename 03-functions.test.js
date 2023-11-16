@@ -12,7 +12,6 @@ describe("Funciones en JavaScript", () => {
         function saludar(name) {
             return "Hola, " + name;
         }
-        const saludo = saludar("Rosa");
 
         assert.strictEqual(saludar(name),"Hola, Rosa");
     })
@@ -30,7 +29,6 @@ describe("Funciones en JavaScript", () => {
         assert.strictEqual(suma(num1, num2),27);
     })
 
-
     it("Las funciones pueden tener múltiples parámetros", () => {
         let userName = "ada89";
         let name = "Ada Martín";
@@ -40,14 +38,16 @@ describe("Funciones en JavaScript", () => {
 
         // Escribe aquí tu función "weatherReport" (fíjate en la aserción para saber qué debe retornar esta función).
         function weatherReport(userName, name, city, weather, rainProbability){
-            function first(name){
-                return "Hola" + name
+                return "Hola " + name + " (" + userName + "), " + "hoy en " + city + " el tiempo es " + weather + " y las probabilidades de lluvia son del " + rainProbability + ".";
             }
-            const saludo = 
-        }
+console.log (weatherReport(userName, name, city, weather, rainProbability))
 
         assert.strictEqual(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
     })
+    
+        // "Hola Ada Martín (ada89), 
+        // hoy en Las Vegas el tiempo es soleado 
+        // y las probabilidades de lluvia son del 10%."
 
 
 
