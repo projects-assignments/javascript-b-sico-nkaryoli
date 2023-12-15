@@ -38,11 +38,11 @@ describe("Funciones en JavaScript", () => {
 
         // Escribe aquí tu función "weatherReport" (fíjate en la aserción para saber qué debe retornar esta función).
         function weatherReport(userName, name, city, weather, rainProbability){
-                return "Hola " + name + " (" + userName + "), " + "hoy en " + city + " el tiempo es " + weather + " y las probabilidades de lluvia son del " + rainProbability + ".";
+                return "Hola " + name + ` (${userName}), ` + "hoy en " + city + " el tiempo es " + weather + " y las probabilidades de lluvia son del " + rainProbability + ".";
             }
 console.log (weatherReport(userName, name, city, weather, rainProbability))
 
-        assert.strictEqual(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
+        assert.strictEqual(weatherReport(name, userName, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
     })
     
         // "Hola Ada Martín (ada89), 
